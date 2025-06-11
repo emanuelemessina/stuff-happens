@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "nodemon index.mjs"
+  },
+  "author": "Emanuele Messina",
+  "license": "MIT",
+  "imports": {
+    "#db": "./storage/db/db.mjs",
+    "#entities/*": "./entities/*.mjs",
+    "#routes/*": "./routes/*.mjs",
+    "#validation/*": "./routes/validation/*.mjs",
+    "#logic/*": "./logic/*.mjs",
+    "#*": "./*.mjs"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}

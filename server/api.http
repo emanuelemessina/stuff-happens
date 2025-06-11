@@ -1,0 +1,33 @@
+### ROOT
+
+GET http://localhost:3001/ HTTP/1.1
+
+### Get logged user
+
+GET http://localhost:3001/user HTTP/1.1
+
+### Login
+
+POST http://localhost:3001/sessions HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "maurizio",
+    "password": "ilmago"
+}
+
+### Logout
+
+DELETE http://localhost:3001/sessions/current HTTP/1.1
+
+### Start game
+
+POST http://localhost:3001/games/ HTTP/1.1
+
+### Get new round for current game
+
+POST http://localhost:3001/games/current/rounds HTTP/1.1
+
+### Get history
+
+GET http://localhost:3001/user/history HTTP/1.1
