@@ -1,12 +1,18 @@
-# Exam #1: "STUFF HAPPENS"
+# STUFF HAPPENS
 
-[Requirements document](https://docs.google.com/document/d/1M33wjx0DTgZSIBhdLQc1-jQdQ6znLe7BbjRz0w3FLe0/edit?tab=t.0#heading=h.dsoclu9d3dge)
+_Commuting Students' Life Edition_
 
-**Area of life**: Commuting students' life.
+A game in which you have to blindly order unlucky situation by their misfortune.
 
-## Student: s333236 GIUSEPPE EMANUELE MESSINA
+## Launch
 
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/uNTgnFHD)
+Start the server
+`cd server; npm install; npm run start`
+
+Start the client
+`cd client; npm install; npm run dev`
+
+Open the browser at `localhost:5173`
 
 ## Screenshots
 
@@ -24,6 +30,8 @@
 | -------- | ---------- | --------------------- |
 | maurizio | ilmago     | has played some games |
 | giovanni | lostregone |
+
+# Implementation Details
 
 ## React Client Application Routes
 
