@@ -16,15 +16,15 @@ export default function useCountdown(count, onTimeout) {
 		if (secondsLeft == -1) return; // halt
 
 		if (secondsLeft > 0) {
-			intervalRef.current = setInterval(() => {
+			intervalRef.current = setTimeout(() => {
 				setSecondsLeft((prev) => prev - 1);
 			}, 1000);
 		} else {
-			clearInterval(intervalRef.current);
+			clearTimeout(intervalRef.current);
 			onTimeout();
 		}
 
-		return () => clearInterval(intervalRef.current); // cleanup
+		return () => clearTimeout(intervalRef.current); // cleanup
 	}, [secondsLeft]);
 
 	return [secondsLeft, () => setSecondsLeft(-1), () => setSecondsLeft(count)];

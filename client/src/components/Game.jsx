@@ -267,12 +267,13 @@ export function PlayButton({ restart, nextRound, start, ...props }) {
 import ProgressBar from "react-bootstrap/ProgressBar";
 
 function CountDownProgressBar({ seconds }) {
-	const progress = (seconds * 100) / ROUND_TIMEOUT_SECONDS;
+	const clampedSeconds = Math.max(0, seconds);
+	const progress = (clampedSeconds * 100) / ROUND_TIMEOUT_SECONDS;
 	const variants = ["success", "warning", "danger"];
 	const variant = variants[progress > 66 ? 0 : progress > 33 ? 1 : 2];
 	return (
 		<div>
-			<ProgressBar variant={variant} now={progress} label={`${seconds} s`} />
+			<ProgressBar variant={variant} now={progress} label={`${clampedSeconds} s`} />
 		</div>
 	);
 }
